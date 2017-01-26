@@ -44,7 +44,7 @@ public class HistogramPlot extends ExamplePanel {
 
 	private static final int SAMPLE_COUNT = 1000;
 
-	@SuppressWarnings("unchecked")
+	//@SuppressWarnings("unchecked")
 	public HistogramPlot() {
 		// Create example data
 		Random random = new Random();
@@ -55,7 +55,7 @@ public class HistogramPlot extends ExamplePanel {
 
 		// Create histogram from data
 		Histogram1D histogram = new Histogram1D(data, Orientation.VERTICAL,
-				new Number[] {-4.0, -3.2, -2.4, -1.6, -0.8, 0.0, 0.8, 1.6, 2.4, 3.6, 4.0});
+				new Number[] {-4.0, -3.2, -2.4, -1.6, -0.8, 0.0, 0.8, 1.6, 2.4, 3.2, 4.0});
 		// Create a second dimension (x axis) for plotting
 		DataSource histogram2d = new EnumeratedData(histogram, (-4.0 + -3.2)/2.0, 0.8);
 

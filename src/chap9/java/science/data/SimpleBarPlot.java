@@ -69,18 +69,18 @@ public class SimpleBarPlot extends ExamplePanel {
 					new Color[] { COLOR1, GraphicsUtils.deriveBrighter(COLOR1) }
 			)
 		);
-		pointRenderer.setBorderStroke(new BasicStroke(3f));
+		/*pointRenderer.setBorderStroke(new BasicStroke(3f));
 		pointRenderer.setBorderColor(
 			new LinearGradientPaint(0f,0f, 0f,1f,
 					new float[] { 0.0f, 1.0f },
 					new Color[] { GraphicsUtils.deriveBrighter(COLOR1), COLOR1 }
 			)
-		);
+		);*/
 		pointRenderer.setValueVisible(true);
 		pointRenderer.setValueColumn(2);
 		pointRenderer.setValueLocation(Location.CENTER);
 		pointRenderer.setValueColor(GraphicsUtils.deriveDarker(COLOR1));
-		pointRenderer.setValueFont(Font.decode(null).deriveFont(Font.BOLD));
+	pointRenderer.setValueFont(Font.decode(null).deriveFont(Font.BOLD));
 
 		// Add plot to Swing component
 		add(new InteractivePanel(plot));

@@ -77,16 +77,16 @@ public class SimpleBoxPlot extends ExamplePanel {
 		);
 
 		// Format boxes
-		Stroke stroke = new BasicStroke(2f);
+		/*Stroke stroke = new BasicStroke(2f);
 		ScaledContinuousColorMapper colors =
 			new LinearGradient(GraphicsUtils.deriveBrighter(COLOR1), Color.WHITE);
-		colors.setRange(1.0, 3.0);
+		colors.setRange(1.0, 3.0);*/
 
 		BoxWhiskerRenderer pointRenderer =
 				(BoxWhiskerRenderer) plot.getPointRenderer(boxData);
-		pointRenderer.setWhiskerStroke(stroke);
+		/*pointRenderer.setWhiskerStroke(stroke);
 		pointRenderer.setBoxBorderStroke(stroke);
-		pointRenderer.setBoxBackground(colors);
+		pointRenderer.setBoxBackground(colors);*/
 		pointRenderer.setBoxBorderColor(COLOR1);
 		pointRenderer.setWhiskerColor(COLOR1);
 		pointRenderer.setCenterBarColor(COLOR1);

@@ -48,28 +48,21 @@ public class AreaPlot extends ExamplePanel {
 	/** Instance to generate random data values. */
 	private static final Random random = new Random();
 
-	@SuppressWarnings("unchecked")
 	public AreaPlot() {
 		// Generate data
 		DataTable data = new DataTable(Double.class, Double.class, Double.class, Double.class);
-		for (double x=0.0; x<2.5*Math.PI; x+=Math.PI/15.0) {
+		for (double x = 0.0; x < 50; x ++) {
 			double y1 = Double.NaN, y2 = Double.NaN, y3 = Double.NaN;
-			if (x>=0.00*Math.PI && x<2.25*Math.PI) {
-				y1 = 4.0*Math.sin(x + 0.5*Math.PI) + 0.1*random.nextGaussian();
-			}
-			if (x>=0.25*Math.PI && x<2.50*Math.PI) {
-				y2 = 4.0*Math.cos(x + 0.5*Math.PI) + 0.1*random.nextGaussian();
-			}
-			if (x>=0.00*Math.PI && x<2.50*Math.PI) {
-				y3 = 2.0*Math.sin(2.0*x/2.5)       + 0.1*random.nextGaussian();
-			}
+			y1 = random.nextGaussian();
+			y2 = random.nextGaussian();
+			y3 = random.nextGaussian();
 			data.add(x, y1, y2, y3);
 		}
 
 		// Create data series
-		DataSeries data1 = new DataSeries("red", data, 0, 1);
-		DataSeries data2 = new DataSeries("blue 1", data, 0, 2);
-		DataSeries data3 = new DataSeries("blue 2", data, 0, 3);
+		DataSeries data1 = new DataSeries("series 1", data, 0, 1);
+		DataSeries data2 = new DataSeries("series 2", data, 0, 2);
+		DataSeries data3 = new DataSeries("series 3", data, 0, 3);
 
 		// Create new xy-plot
 		XYPlot plot = new XYPlot(data1, data2, data3);

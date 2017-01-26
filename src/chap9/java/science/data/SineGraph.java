@@ -50,7 +50,7 @@ public class SineGraph extends JFrame {
 		getContentPane().add(new InteractivePanel(plot));
 		LineRenderer lines = new DefaultLineRenderer2D();
 		plot.setLineRenderer(data, lines);
-		Color color = new Color(0.0f, 0.3f, 1.0f);
+		Color color = new Color(0.0f, 0.0f, 0.0f);
 		plot.getPointRenderer(data).setColor(color);
 		plot.getLineRenderer(data).setColor(color);
 	}
